@@ -1,0 +1,79 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="9O;v.bUkLfb{c:U(tf`e">estadoMotor</variable><variable id="8r=~CVtz@lbdzp}/~XhS">sentido</variable><variable id="wShTuf(4)~IdMIs]hG_B">velocidade</variable><variable id="?6X6~@!iBIeD*vePUfXR">tempo</variable></variables><block type="pxt-on-start" id="s6bG/tKSUOUR2g(ilyqa" x="49" y="41"><statement name="HANDLER"><block type="function_call" id="oROdM@*g;sgSf^6O1cMu"><mutation name="carregarVariaveis" functionid="2XFQWA:{iiRbc~uu#Z)V"></mutation></block></statement></block><block type="device_button_event" id="C(bzyoJBJ?o(x_HdB89x" x="385" y="41"><field name="NAME">Button.A</field><statement name="HANDLER"><block type="variables_set" id="CFi.JG;Aymt^Y#k*n+V("><field name="VAR" id="8r=~CVtz@lbdzp}/~XhS">sentido</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="n8j{1+I7k@hy5_d(5:H%"><field name="TEXT">frente</field></block></value><next><block type="variables_set" id="z$Hop~l`~Bt/%;+Z2y~B"><field name="VAR" id="wShTuf(4)~IdMIs]hG_B">velocidade</field><value name="VALUE"><shadow type="math_number" id="Hhut+4Kd`Fqn;fI8_@(a"><field name="NUM">255</field></shadow></value></block></next></block></statement></block><block type="function_definition" id="#^q]e}qSo^=N#1+=L5RH" x="911" y="26"><mutation name="andar" functionid="A1`v2f)jzdsU=@U,dG8P"><arg name="v" id="8%bAS-]f-)/3EI[tSsch" type="number"></arg><arg name="t" id="^uWs0/saMPjnH,1k+Hui" type="number"></arg><arg name="s" id="*tbaLjSr`sU8xCp^p;3k" type="string"></arg></mutation><field name="function_name">andar</field><statement name="STACK"><block type="variables_set" id="$C$:I[IOU5Q%XzXZ]Fu^"><field name="VAR" id="8r=~CVtz@lbdzp}/~XhS">sentido</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="argument_reporter_string" id="O@a[iV6|A6ivT4++ro2X"><field name="VALUE">s</field></block></value><next><block type="controls_if" id="Sni~#X^~nh-JS]/r4_TI"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="ojO!C;|t!Kead#7V0)^9"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="4HJ0I^xmKvRB0GdTk~qK"><field name="VAR" id="9O;v.bUkLfb{c:U(tf`e">estadoMotor</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="O1P^}p|z.LdrC!JJB`[S"><field name="TEXT">ligado</field></block></value></block></value><statement name="DO0"><block type="robotbit_motor_run" id="#a3Y6GHg~khl`:Rl)?)y"><field name="index">robotbit.Motors.M1A</field><value name="speed"><shadow type="math_number_minmax"><mutation min="-255" max="255" label="Number" precision="0"></mutation><field name="SLIDER">0</field></shadow><block type="argument_reporter_number" id="#~0I_Iy=pIJ*KKD=L1jn"><field name="VALUE">v</field></block></value></block></statement></block></next></block></statement></block><block type="function_definition" id="1K9sNoNZ3M_2.655A?Z-" x="1914" y="1"><mutation name="mostrarLeds" functionid="r9FI4O0+DDKDrZW__2eG"></mutation><field name="function_name">mostrarLeds</field><statement name="STACK"><block type="device_show_leds" id="f(*N`[v(dDP$Ht)U[;}2"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="controls_if" id="lvCFrpJeEg[!;{NLQ6B="><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="qRJvW*3XuH~NEYtqORng"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="$|l6*XLJKTV#KL]/@sw@"><field name="VAR" id="9O;v.bUkLfb{c:U(tf`e">estadoMotor</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="X%418ARj,5w(VgVmk|x]"><field name="TEXT">desligado</field></block></value></block></value><statement name="DO0"><block type="variables_set" id="_K#LnwF9~:nCA/u|H.X5"><field name="VAR" id="wShTuf(4)~IdMIs]hG_B">velocidade</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="math_number" id="7T(#sIdBl5pytJZSh}67"><field name="NUM">0</field></block></value><next><block type="robotbit_motor_run" id="b=v#Yqs*(+a!QqM7mgD!"><field name="index">robotbit.Motors.M1A</field><value name="speed"><shadow type="math_number_minmax"><mutation min="-255" max="255" label="Number" precision="0"></mutation><field name="SLIDER">8</field></shadow><block type="variables_get" id="S(`@:=RfME8p0svI#n^("><field name="VAR" id="wShTuf(4)~IdMIs]hG_B">velocidade</field></block></value><next><block type="device_show_leds" id=":3mqFLqYlxwq0;OPTO!W"><field name="LEDS">`
+        # . . . # 
+        . # . # . 
+        . . # . . 
+        . # . # . 
+        # . . . #
+        `</field></block></next></block></next></block></statement><next><block type="controls_if" id="D2oeJ$DXm4+:zICo@3$7"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="HE!D6IV{W4+0Db@D:iTg"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="Mwe^80+kke|V!TSYnBx7"><field name="VAR" id="9O;v.bUkLfb{c:U(tf`e">estadoMotor</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="8Qkq`kG_k~1KchFSWFDa"><field name="TEXT">ligado</field></block></value></block></value><statement name="DO0"><block type="device_show_leds" id="Dl2jQr`CB/`0lM0n/V}E"><field name="LEDS">`
+        . . # . . 
+        . # . # . 
+        # . . . # 
+        . # . # . 
+        . . # . .
+        `</field></block></statement><next><block type="controls_if" id="tla?l:4?^7zL:jUVum#%"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="=MPFd3K/!kLU5(g5FR=x"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="cNh5P+R#91~xC~2hXJ+L"><field name="VAR" id="8r=~CVtz@lbdzp}/~XhS">sentido</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="p-.8dR1ev-5sZ8t.hWDS"><field name="TEXT">parado</field></block></value></block></value><statement name="DO0"><block type="device_show_leds" id="!?T_d{uT:%73ROLp6@pM"><field name="LEDS">`
+        # # # # # 
+        # . . . # 
+        # . . . # 
+        # . . . # 
+        # # # # #
+        `</field><next><block type="device_show_leds" id="?LZ1@f3w7]8vxXoI4@3:"><field name="LEDS">`
+        . . . . . 
+        . # # # . 
+        . # # # . 
+        . # # # . 
+        . . . . .
+        `</field></block></next></block></statement><next><block type="controls_if" id="$f^jaC,8u?kqef_Juu$o"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="=qPfyjK.Ol4:S;10as%H"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="+8}w1=|~IG/C5BwG:Z{}"><field name="VAR" id="8r=~CVtz@lbdzp}/~XhS">sentido</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="-(.hD?wXGYmrAfxZ-TI2"><field name="TEXT">frente</field></block></value></block></value><statement name="DO0"><block type="device_show_leds" id="3ncD_[?`9wj8;CB$w$%R"><field name="LEDS">`
+        . . # . . 
+        . # . # . 
+        # # . # # 
+        . # . # . 
+        . # # # .
+        `</field><next><block type="device_show_leds" id="AuZ@I{K:+I4wnn}5@7eJ"><field name="LEDS">`
+        . . # . . 
+        . # # # . 
+        # # # # # 
+        . # # # . 
+        . # # # .
+        `</field><next><block type="device_show_leds" id="O=|_0!9l~}VWmm2HydM~"><field name="LEDS">`
+        . . # . . 
+        . # . # . 
+        # # . # # 
+        . # . # . 
+        . # # # .
+        `</field></block></next></block></next></block></statement><next><block type="controls_if" id="Mxqd_vym7PyxXK#ixxja"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="r*)Lm`[Lf{S9f+0e[~a3"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="DO@]WO`-MDb6erEo[X{{"><field name="VAR" id="8r=~CVtz@lbdzp}/~XhS">sentido</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="){#r*6p3C!rA7F3N,KGF"><field name="TEXT">tras</field></block></value></block></value><statement name="DO0"><block type="device_show_leds" id="U3UVZuM3[qR87,pzF,sf"><field name="LEDS">`
+        . # # # . 
+        . # . # . 
+        # # . # # 
+        . # . # . 
+        . . # . .
+        `</field><next><block type="device_show_leds" id="T*vb^I9o?#1d901vUZQ|"><field name="LEDS">`
+        . # # # . 
+        . # # # . 
+        # # # # # 
+        . # # # . 
+        . . # . .
+        `</field><next><block type="device_show_leds" id="8H?Dz6h(24PeNU0Y5^tY"><field name="LEDS">`
+        . # # # . 
+        . # . # . 
+        # # . # # 
+        . # . # . 
+        . . # . .
+        `</field></block></next></block></next></block></statement><next><block type="device_show_leds" id="=x5J@^B?%b_YVv?2v4-j"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id=",!,aXp#;sVlvVE/ir-9L"><field name="LEDS">`
+        # # . # # 
+        . . # . . 
+        # . # . # 
+        # # # # # 
+        # . # . #
+        `</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="function_definition" id="eWQ{}8Qhaq4[WQ;h@lJB" x="1458" y="25"><mutation name="carregarVariaveis" functionid="2XFQWA:{iiRbc~uu#Z)V"></mutation><field name="function_name">carregarVariaveis</field><statement name="STACK"><block type="variables_set" id="(;50EO3/SrgT#aUo{U0C"><field name="VAR" id="9O;v.bUkLfb{c:U(tf`e">estadoMotor</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="*wi^.L7YW(oVSyABd(~E"><field name="TEXT">desligado</field></block></value><next><block type="variables_set" id="KFuB/$;8/*-WjurRlsii"><field name="VAR" id="8r=~CVtz@lbdzp}/~XhS">sentido</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="*ttEaoC6g6%~cu:/$=n-"><field name="TEXT">parado</field></block></value><next><block type="variables_set" id="m.wAZE_AVzC)M`,iqcg="><field name="VAR" id="wShTuf(4)~IdMIs]hG_B">velocidade</field><value name="VALUE"><shadow type="math_number" id=";RT]6!2TY#^|8y%p:pRu"><field name="NUM">0</field></shadow></value><next><block type="variables_set" id="I=Lo!:+CV!o?MpVQONf-"><field name="VAR" id="?6X6~@!iBIeD*vePUfXR">tempo</field><value name="VALUE"><shadow type="math_number" id="G)t?LTvPZ@6U9S!Ri,r-"><field name="NUM">0</field></shadow></value></block></next></block></next></block></next></block></statement></block><block type="text" id="P~cm%,Lm)-ueezL,pPt." disabled="true" x="1190" y="152"><field name="TEXT">parado</field></block><block type="device_forever" id="#{=DvhzK0sSOs+3.kbZw" x="48" y="232"><statement name="HANDLER"><block type="function_call" id="$LfaS3-/7)..4/X,%k[I"><mutation name="mostrarLeds" functionid="r9FI4O0+DDKDrZW__2eG"></mutation></block></statement></block><block type="device_button_event" id="[d0a7som+F4YVMG%*D3n" x="391" y="270"><field name="NAME">Button.B</field><statement name="HANDLER"><block type="variables_set" id="`Wg?V(28ez3t+L-85pV]"><field name="VAR" id="8r=~CVtz@lbdzp}/~XhS">sentido</field><value name="VALUE"><shadow type="math_number"><field name="NUM">1</field></shadow><block type="text" id="Qj/XX=w]j5iTc!5]k.H="><field name="TEXT">tras</field></block></value><next><block type="variables_set" id="Riwgz1^FgTbTF3m*_O)M"><field name="VAR" id="wShTuf(4)~IdMIs]hG_B">velocidade</field><value name="VALUE"><shadow type="math_number" id="ejs1RZ[5iaT?x-$3Og;X"><field name="NUM">-255</field></shadow></value></block></next></block></statement></block><block type="input_logo_event" id="3p#?I*s3Zi+z);=GV4Gl" x="387" y="532"><field name="action">TouchButtonEvent.Pressed</field><statement name="HANDLER"><block type="controls_if" id="/o}}(2zc$;3B#?`VM+nx"><mutation else="1"></mutation><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="|Ei4]BUL@UA3kf=L;IK_"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="qjT!l|^N:EC0ZTP}/Sd?"><field name="VAR" id="9O;v.bUkLfb{c:U(tf`e">estadoMotor</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="uJQR1O@4xcocIfV{z5mS"><field name="TEXT">desligado</field></block></value></block></value><statement name="DO0"><block type="variables_set" id="(o.wcDFz$U=[Bq7,KcM1"><field name="VAR" id="9O;v.bUkLfb{c:U(tf`e">estadoMotor</field><value name="VALUE"><shadow type="math_number"><field name="NUM">1</field></shadow><block type="text" id="rWpPs3^Z3B95T5A!l0,F"><field name="TEXT">ligado</field></block></value><next><block type="variables_set" id="C1^zORv}sq5y[Z^yu4US"><field name="VAR" id="wShTuf(4)~IdMIs]hG_B">velocidade</field><value name="VALUE"><shadow type="math_number" id="ay/A}ZU?HXeqP84J`PeF"><field name="NUM">255</field></shadow></value></block></next></block></statement><statement name="ELSE"><block type="variables_set" id="sttlGg=Y;RW;L^vk^EHJ"><field name="VAR" id="9O;v.bUkLfb{c:U(tf`e">estadoMotor</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text" id="J6Y_j;zNp;y0$.k7~Twi"><field name="TEXT">desligado</field></block></value><next><block type="variables_set" id="RS`5!.k:QnRzM=.#Vym)"><field name="VAR" id="wShTuf(4)~IdMIs]hG_B">velocidade</field><value name="VALUE"><shadow type="math_number" id="QT4P+ATqh2s+o}!^,/Wr"><field name="NUM">0</field></shadow></value></block></next></block></statement></block></statement></block></xml>
